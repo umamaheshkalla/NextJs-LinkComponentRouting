@@ -5,6 +5,10 @@ function ProductDetails(){
 const router = useRouter()
 const productId = router.query.productId
 
+const onPlaceOrder = () => {
+    console.log("Order Placed")
+    router.push("/placeorder")
+}
     return(
         <>
 
@@ -29,6 +33,9 @@ const productId = router.query.productId
                 </h3>
             </a>
             </Link>
+            <button onClick = {onPlaceOrder}>
+                Place Order
+            </button>
         </center>
         </>
     )
